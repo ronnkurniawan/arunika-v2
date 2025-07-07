@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('PPSupplyMono-Medium.woff2') format('woff2'),
+        url('PPSupplyMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('PPSupplyMono-Bold.woff2') format('woff2'),
+        url('PPSupplyMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('PPSupplyMono-Ultralight.woff2') format('woff2'),
+        url('PPSupplyMono-Ultralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('PPSupplyMono-Regular.woff2') format('woff2'),
+        url('PPSupplyMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'PP Formula Condensed';
+    src: url('PPFormula-CondensedRegular.woff2') format('woff2'),
+        url('PPFormula-CondensedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Condensed';
+    src: url('PPFormula-CondensedExtralight.woff2') format('woff2'),
+        url('PPFormula-CondensedExtralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Compressed';
+    src: url('PPFormula-CondensedBlack.woff2') format('woff2'),
+        url('PPFormula-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Condensed';
+    src: url('PPFormula-CondensedRegularItalic.woff2') format('woff2'),
+        url('PPFormula-CondensedRegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Extended';
+    src: url('PPFormula-ExtendedBold.woff2') format('woff2'),
+        url('PPFormula-ExtendedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Condensed';
+    src: url('PPFormula-CondensedLightItalic.woff2') format('woff2'),
+        url('PPFormula-CondensedLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Extended';
+    src: url('PPFormula-ExtendedMedium.woff2') format('woff2'),
+        url('PPFormula-ExtendedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Extended';
+    src: url('PPFormula-ExtendedLight.woff2') format('woff2'),
+        url('PPFormula-ExtendedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-Light.woff2') format('woff2'),
+        url('PPFormula-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-ExtraboldItalic.woff2') format('woff2'),
+        url('PPFormula-ExtraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-Extrabold.woff2') format('woff2'),
+        url('PPFormula-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Extended';
+    src: url('PPFormula-ExtendedLightItalic.woff2') format('woff2'),
+        url('PPFormula-ExtendedLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Narrow';
+    src: url('PPFormula-NarrowBold.woff2') format('woff2'),
+        url('PPFormula-NarrowBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-MediumItalic.woff2') format('woff2'),
+        url('PPFormula-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-Medium.woff2') format('woff2'),
+        url('PPFormula-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Narrow';
+    src: url('PPFormula-NarrowRegular.woff2') format('woff2'),
+        url('PPFormula-NarrowRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Narrow';
+    src: url('PPFormula-NarrowSemibold.woff2') format('woff2'),
+        url('PPFormula-NarrowSemibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Narrow';
+    src: url('PPFormula-NarrowBoldItalic.woff2') format('woff2'),
+        url('PPFormula-NarrowBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-Regular.woff2') format('woff2'),
+        url('PPFormula-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Semi Cond';
+    src: url('PPFormula-SemiCondensedMedium.woff2') format('woff2'),
+        url('PPFormula-SemiCondensedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula';
+    src: url('PPFormula-RegularItalic.woff2') format('woff2'),
+        url('PPFormula-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Semi Condensed';
+    src: url('PPFormula-SemiCondensedThin.woff2') format('woff2'),
+        url('PPFormula-SemiCondensedThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Semi Cond Exlight';
+    src: url('PPFormula-SemiCondensedExtralightItalic.woff2') format('woff2'),
+        url('PPFormula-SemiCondensedExtralightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Semi Cond Exlight';
+    src: url('PPFormula-SemiCondensedExtralight.woff2') format('woff2'),
+        url('PPFormula-SemiCondensedExtralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Formula Semi Extended';
+    src: url('PPFormula-SemiExtendedBold.woff2') format('woff2'),
+        url('PPFormula-SemiExtendedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
