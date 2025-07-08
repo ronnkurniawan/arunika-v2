@@ -31,27 +31,41 @@ function changeImage () {
 
 changeImage();
 
-/*function animateHeroImg () {
-  gsap.to("#img", {
-    duration: 3,
-    repeat: -1,
-    ease: "bounce.out",
-    y: "10vh",
-    })
+function lerp (start, end, t) {
+  return start + (end - start) * t;
 }
+/*ScrollTrigger.create({
+  trigger: "#animate",
+  start: "top bottom",
+  end: "top top",
+  scrub: true,
+  markers: false,
+  pin: "#animate", 
+  onUpdate: (self) => {
+    const progress = self.progress;
 
-animateHeroImg();*/
+    gsap.set("#img", {
+      scale:  lerp(0.3, 1, progress),  // Adjust the scale of the image
+      y:      `${lerp(3, 10, progress)}vh`, // Move the image vertically
+      rotate: lerp(12, 0, progress)   // Rotate the image
+    });
+  }
+});*/
 
-gsap.fromTo("#img", 
-  {scale: 1.3, rotate: 12},
-  {
-    scrollTrigger: {
-    trigger: "#animate",
-    start: "top bottom",
-    end: "top top",
-    scrub: true,
-    markers: true
-  }, 
-  scale: 3,
-  ease: "none",
-})
+ScrollTrigger.create({
+  trigger: "#animate",
+  start: "top bottom",
+  end: "top top",
+  scrub: true,
+  markers: false, 
+  pin: "#animate",
+  onUpdate: (self) => {
+    const progress = self.progress;
+
+    gsap.set("#img", {
+      scale: lerp(0.3, 1, progress),
+      y: `${lerp(-96, -93, progress)}vh`,
+      rotate: lerp(12, 0, progress) 
+    });
+  }
+});

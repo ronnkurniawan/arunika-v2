@@ -11,7 +11,7 @@
     <!--home page-->
     <div>
       <!--nav bar-->
-      <nav class="flex justify-between items-center w-full px-4 py-5 bg-[--primary-color] fixed top-0 z-50">
+      <nav class="flex justify-between items-center w-full px-4 py-5 bg-transparent fixed top-0 z-50">
         <div id="arunika-header" class="font-supply text-[1.2vh] md:text-[1.5vh] lg:text-[2vh] text-[--primary-color] bg-black p-2 rounded">Arunika Studio</div>
         <div id="menu" class="font-supply text-[1.2vh] md:text-[1.5vh]  lg:text-[2vh] text-black bg-[--secondary-color] px-[1.5vw] py-[1vh] rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Menu</div>
       </nav>
@@ -36,53 +36,69 @@
         <div class="grid grid-cols-3 justify-between mx-9 px-6 py-5 items-end w-full mt-[2vh]">
           <!--left-->
           <div class="flex flex-col items-start gap-[1vh] text-left">
-            <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] bg-white rounded p-2">FIND ME</p>
+            <p 
+            class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] bg-white rounded p-2">FIND ME
+            </p>
             <div class="flex flex-row items-start gap-[1vw]">
-              <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">INSTAGRAM</p>
+              <p 
+              class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">INSTAGRAM
+              </p>
               <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">LINKEDIN</p>
             </div>
           </div>
 
           <!--middle-->
           <div class="">
-            <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-center">JUNE 2025 // ARUNIKA</p>
+            <p 
+            class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-center">JUNE 2025 // ARUNIKA
+          </p>
           </div>
 
           <!--right-->
           <div>
-            <p class="font-supply text-black text-[1.5vh] text-right">SAY HI</p>
+            <p 
+            class="font-supply text-black text-[1.5vh] text-right">SAY HI
+          </p>
           </div>
         </div>
       </div>
 
       <!--home hero-->
-      <div class="flex flex-col justify-between items-center h-screen   w-screen bg-[--primary-color] px-4 py-5 ">
-        
-        <div class="flex flex-col justify-center items-center h-full w-full">
-          <h2 class="font-rader text-[10vh] md:text-[18vh] lg:text-[30vh] text-black items-end text-center leading-[10vh] md:leading-[18vh] lg:leading-[28vh] relative z-20 translate-y-[10vh] ">ARUNIKA <br>STUDIO</h2>
-          <img id="img" src="public/images/hero/img8.jpg" alt="" class="rounded-lg h-[25vh] w-[30vw] relative z-10 object-cover translate-y-[-30vh] rotate-12"/>
-          
-        </div>
+      <div id="hero" class="relative flex flex-col justify-between items-center h-screen w-screen bg-[--primary-color] px-4 py-5 overflow-hidden">
   
-        <div class="flex flex-row justify-between items-center w-full z-20">
-          <div>
-            <p class="font-supply text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-left">VISUAL ARTS</p>
-          </div>
-          <div >
-            <p class="font-supply text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-center">PIXELS BY ARUNIKA</p>
-          </div>
-          <div>
-            <p class="font-supply text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-right">PORTFOLIO MODE: ON</p>
-          </div>
+      
+        <!-- Teks utama -->
+        <div class="relative z-30 flex flex-col justify-center items-center h-full w-full">
+          <h2 id="studio"
+            class="font-rader text-[10vh] md:text-[18vh] lg:text-[30vh] text-black text-center leading-[10vh] md:leading-[18vh] lg:leading-[28vh] translate-y-[3vh]">
+            ARUNIKA <br>STUDIO
+          </h2>
+        </div>
+      
+        <!-- Footer -->
+        <div class="relative z-30 flex flex-row justify-between items-center w-full px-9">
+          <p class="font-supply text-[1.2vh] lg:text-[1.5vh] text-black">VISUAL ARTS</p>
+          <p class="font-supply text-[1.2vh] lg:text-[1.5vh] text-black text-center">PIXELS BY ARUNIKA</p>
+          <p class="font-supply text-[1.2vh] lg:text-[1.5vh] text-black text-right">PORTFOLIO MODE: ON</p>
+        </div>
       </div>
 
     </div>
 
-    <div id="animate" class="h-screen w-screen bg-[--primary-color]">
-
+    <div id="animate" class="stop h-screen w-screen bg-[--primary-color] z-0">
+       <!-- Gambar: background & animasi -->
+       <img 
+       id="img" 
+       src="/images/hero/img8.jpg" 
+       alt="Hero Image" 
+       class="fixed top-1/2 left-1/2 w-[95vw] h-[90vh] object-cover 
+       will-change-transform origin-center z-[20] 
+       pointer-events-none rounded-3xl 
+       -translate-x-1/2 -translate-y-1/2"
+     />
     </div>
 
-    <div class="flex flex-col justify-between items-center h-screen w-screen bg-[--primary-color] px-4 py-5 ">
+    <div class="flex flex-col justify-between items-center h-screen w-screen bg-[--primary-color] px-4 py-5 mt-[-95vh] relative z-30">
 
       <div class="flex justify-center items-center h-full w-full">
         <h2 class="font-rader text-[5vh] md:text-[7vh] lg:text-[10vh] text-black items-center text-center">WORK PLAYGROUND</h2>
