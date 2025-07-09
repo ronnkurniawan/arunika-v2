@@ -9,115 +9,88 @@
   </head>
   <body>
     <!--home page-->
-    <div>
-      <!--nav bar-->
+    <div class="relative">
+
+      <!-- Nav Bar -->
       <nav class="flex justify-between items-center w-full px-4 py-5 bg-transparent fixed top-0 z-50">
-        <div id="arunika-header" class="font-supply text-[1.2vh] md:text-[1.5vh] lg:text-[2vh] text-[--primary-color] bg-black p-2 rounded">Arunika Studio</div>
-        <div id="menu" class="font-supply text-[1.2vh] md:text-[1.5vh]  lg:text-[2vh] text-black bg-[--secondary-color] px-[1.5vw] py-[1vh] rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Menu</div>
+        <div id="arunika-header" class="font-supply text-[1.2vh] md:text-[1.5vh] lg:text-[2vh] text-[--primary-color] bg-black p-2 rounded">
+        Arunika Studio
+        </div>
+        <div id="menu" class="font-supply text-[1.2vh] md:text-[1.5vh] lg:text-[2vh] text-black bg-[--secondary-color] px-[1.5vw] py-[1vh] rounded cursor-pointer hover:bg-black hover:text-[--primary-color] duration-300">
+        Menu
+        </div>
       </nav>
 
-      <!--nav overlay-->
-      <div id="nav-overlay" class="flex flex-col fixed hidden items-center justify-between bg-[--primary-color] gap-[2vh] h-[100vh] w-[100vw] top-0 left-0 z-40 opacity-0 transition duration-300 ease-out">
-        <div class="flex flex-col items-center gap-[2vh] mt-[25vh] mx-9">
-          <div>
-            <p class="font-rader text-black text-[5vh] bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color] ">Index</p>
-          </div>
-          <div>
-            <p class="font-rader text-black text-[5vh] bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">The Good Stuff</p>
-          </div>
-          <div>
-            <p class="font-rader text-black text-[5vh] bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Meet Arunika</p>
-          </div>
-          <div>
-            <p class="font-rader text-black text-[5vh] bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Slide In</p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-3 justify-between mx-9 px-6 py-5 items-end w-full mt-[2vh]">
-          <!--left-->
-          <div class="flex flex-col items-start gap-[1vh] text-left">
-            <p 
-            class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] bg-white rounded p-2">FIND ME
-            </p>
-            <div class="flex flex-row items-start gap-[1vw]">
-              <p 
-              class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">INSTAGRAM
-              </p>
-              <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">LINKEDIN</p>
-            </div>
-          </div>
-
-          <!--middle-->
-          <div class="">
-            <p 
-            class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-center">JUNE 2025 // ARUNIKA
-          </p>
-          </div>
-
-          <!--right-->
-          <div>
-            <p 
-            class="font-supply text-black text-[1.5vh] text-right">SAY HI
-          </p>
-          </div>
-        </div>
+      <!-- Nav Overlay -->
+      <div id="nav-overlay" class="fixed flex flex-col justify-between bg-[--primary-color] h-screen w-screen top-0 left-0 z-40 opacity-0 transition duration-300 ease-out px-6 py-5">
+      <!-- Nav Links -->
+      <div class="flex flex-col items-center gap-[2vh] mt-[25vh]">
+      <p class="font-rader text-black text-[5vh] text-center bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Index</p>
+      <p class="font-rader text-black text-[5vh] text-center bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">The Good Stuff</p>
+      <p class="font-rader text-black text-[5vh] text-center bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Meet Arunika</p>
+      <p class="font-rader text-black text-[5vh] text-center bg-white px-2 rounded cursor-pointer hover:bg-black hover:text-[--primary-color]">Slide In</p>
       </div>
 
-      <!--home hero-->
-      <div id="hero" class="relative flex flex-col justify-between items-center h-screen w-screen bg-[--primary-color] px-4 py-5 overflow-hidden">
-  
-      
-        <!-- Teks utama -->
+      <!-- Nav Footer -->
+      <div class="grid grid-cols-3 justify-between items-end w-full mt-auto">
+      <div class="flex flex-col items-start gap-[1vh] text-left">
+        <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] bg-white rounded p-2">FIND ME</p>
+        <div class="flex flex-row items-start gap-[1vw]">
+          <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">INSTAGRAM</p>
+          <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh]">LINKEDIN</p>
+        </div>
+      </div>
+      <div>
+        <p class="font-supply text-black text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-center">JUNE 2025 // ARUNIKA</p>
+      </div>
+      <div>
+        <p class="font-supply text-black text-[1.5vh] text-right">SAY HI</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- Home Hero -->
+      <section id="hero" class="relative flex flex-col justify-between items-center h-screen w-screen bg-[--primary-color] px-4 py-5 overflow-hidden">
         <div class="relative z-30 flex flex-col justify-center items-center h-full w-full">
-          <h2 id="studio"
-            class="font-rader text-[10vh] md:text-[18vh] lg:text-[30vh] text-black text-center leading-[10vh] md:leading-[18vh] lg:leading-[28vh] translate-y-[3vh]">
+          <h2 id="studio" class="font-rader text-[10vh] md:text-[18vh] lg:text-[30vh] text-black text-center leading-[10vh] md:leading-[18vh] lg:leading-[28vh] translate-y-[3vh]">
             ARUNIKA <br>STUDIO
           </h2>
         </div>
-      
-        <!-- Footer -->
-        <div class="relative z-30 flex flex-row justify-between items-center w-full px-9">
+
+        <div class="relative z-30 flex flex-row justify-between items-center w-full">
           <p class="font-supply text-[1.2vh] lg:text-[1.5vh] text-black">VISUAL ARTS</p>
           <p class="font-supply text-[1.2vh] lg:text-[1.5vh] text-black text-center">PIXELS BY ARUNIKA</p>
           <p class="font-supply text-[1.2vh] lg:text-[1.5vh] text-black text-right">PORTFOLIO MODE: ON</p>
         </div>
-      </div>
+      </section>
+
+      <!-- Background Animated Image -->
+      <section id="animate" class="h-screen w-screen bg-[--primary-color] z-0">
+        <img id="img" src="/images/hero/img8.jpg" alt="Hero Image"
+            class="fixed top-1/2 left-1/2 w-[95vw] h-[90vh] object-cover will-change-transform origin-center z-[20] pointer-events-none rounded-3xl -translate-x-1/2 -translate-y-1/2" />
+      </section>
+
+      <!-- Featured Works -->
+      <section id="featured-works" class="overflow-hidden">
+        <div id="text-slider-container" class="overflow-hidden h-screen w-screen">
+          <div class="slide-text flex gap-[30vw] items-center h-full w-[400vw] will-change-transform">
+            <h2 class="font-rader text-[10vh] w-[100vw] text-center whitespace-nowrap">WORK PLAYGROUND 1</h2>
+            <h2 class="font-rader text-[10vh] w-[100vw] text-center whitespace-nowrap">WORK PLAYGROUND 2</h2>
+            <h2 class="font-rader text-[10vh] w-[100vw] text-center whitespace-nowrap">WORK PLAYGROUND 3</h2>
+            <h2 class="font-rader text-[10vh] w-[100vw] text-center whitespace-nowrap">WORK PLAYGROUND 4</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer After Slider -->
+      <footer class="flex flex-row justify-between items-center w-full px-4 py-5">
+        <p class="font-supply font-semibold text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-left">Visual Playground</p>
+        <p class="font-supply font-semibold text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-center">///////////////</p>
+        <p class="font-supply font-semibold text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-right">SLIDE IN PORTFOLIO</p>
+      </footer>
 
     </div>
 
-    <div id="animate" class="stop h-screen w-screen bg-[--primary-color] z-0">
-       <!-- Gambar: background & animasi -->
-       <img 
-       id="img" 
-       src="/images/hero/img8.jpg" 
-       alt="Hero Image" 
-       class="fixed top-1/2 left-1/2 w-[95vw] h-[90vh] object-cover 
-       will-change-transform origin-center z-[20] 
-       pointer-events-none rounded-3xl 
-       -translate-x-1/2 -translate-y-1/2"
-     />
-    </div>
-
-    <div class="flex flex-col justify-between items-center h-screen w-screen bg-[--primary-color] px-4 py-5 mt-[-95vh] relative z-30">
-
-      <div class="flex justify-center items-center h-full w-full">
-        <h2 class="font-rader text-[5vh] md:text-[7vh] lg:text-[10vh] text-black items-center text-center">WORK PLAYGROUND</h2>
-      </div>
-
-      <div class="flex flex-row justify-between items-center w-full">
-        <div>
-          <p class="font-supply font-semibold text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-left"> Visual Playground</p>
-        </div>
-        <div >
-          <p class="font-supply font-semibold text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-center">///////////////</p>
-        </div>
-        <div>
-          <p class="font-supply font-semibold text-[1.2vh] md:text-[1.3vh] lg:text-[1.5vh] text-black text-right">SLIDE IN PORTFOLIO</p>
-        </div>
-      </div>
-
-    </div>
-     
       
     <script type="module" src="/src/main.js"></script>
   </body>
