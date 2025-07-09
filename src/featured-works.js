@@ -40,7 +40,31 @@ ScrollTrigger.create({
     const progress = self.progress;
 
     gsap.set(".slide-text", {
-      x: `${lerp(100, -310, progress)}vw`,
+      x: `${lerp(100, -400, progress)}vw`, //lebar total dari 4 slider adalah 400vw
+    });
+
+    gsap.utils.toArray(".slide-img1").forEach((img, i) => {
+      gsap.set(img, {
+        scale: lerp(0, 4, progress),
+        y: `${lerp(20 + i, 40, progress)}vh`,
+        x: `${lerp(30 + i, 40, progress)}vw`,
+      });
+    });
+
+    gsap.utils.toArray(".slide-img2").forEach((img, i) => {
+      gsap.set(img, {
+        scale: lerp(0, 3, progress),
+        x: `${lerp(-30 + i, 40, progress)}vw`,
+        y: `${lerp(-20 + i, 40, progress)}vh`,
+      })
+    })
+
+    gsap.utils.toArray(".slide-img3").forEach((img, i) => {
+      gsap.set(img, {
+        scale: lerp(0, 3, progress),
+        x: `${lerp(20 + i, 40, progress)}vw`,
+        y: `${lerp(-50 + i, 40, progress)}vh`
+      })
     })
   }
-})
+});
