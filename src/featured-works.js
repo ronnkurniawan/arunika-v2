@@ -12,7 +12,7 @@ function lerp (start, end, p) {
 ScrollTrigger.create({
   trigger: "#animate",
   start: "bottom bottom",
-  end: "+=3000", // sama dengan 2000px
+  end: "+=3000", // sama dengan 3000px
   scrub: true,
   pin: "#featured-works",
   markers: false,

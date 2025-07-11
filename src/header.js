@@ -5,16 +5,6 @@ const arunikaHeader = document.querySelector('#arunika-header');
 const navOverlay = document.querySelector('#nav-overlay');
 
 
-/* tanpa animasi
-if (menu && navOverlay) {
-  menu.addEventListener('click', function () {
-    const isHidden = navOverlay.classList.toggle('hidden');
-    menu.textContent = isHidden ? 'Menu' : 'Close';
-  })
-}
-*/
-
-
 if (menu) {
   menu.addEventListener('click', function () {
     const isHidden = navOverlay.classList.contains('hidden');

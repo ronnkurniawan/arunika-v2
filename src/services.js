@@ -77,10 +77,22 @@ ScrollTrigger.matchMedia({
       onUpdate: (self) => {
         const progress = self.progress;
 
-        gsap.set(serviceCard1, { y: `${lerp(180, 1, progress)}vh` });
-        gsap.set(serviceCard2, { y: `${lerp(400, -23, progress)}vh` });
-        gsap.set(serviceCard3, { y: `${lerp(600, -45, progress)}vh` });
-        gsap.set(serviceCard4, { y: `${lerp(800, -65, progress)}vh` });
+        gsap.set(serviceCard1, { 
+          y: `${lerp(180, 1, progress)}vh`,
+          rotate: lerp(25, 0, progress)
+        });
+        gsap.set(serviceCard2, { 
+          y: `${lerp(400, -23, progress)}vh`,
+          rotate: lerp(50, 0, progress) 
+        });
+        gsap.set(serviceCard3, { 
+          y: `${lerp(600, -45, progress)}vh`,
+          rotate: lerp(50, 0, progress) 
+        });
+        gsap.set(serviceCard4, { 
+          y: `${lerp(800, -65, progress)}vh`,
+          rotate: lerp(50, 0, progress) 
+        });
       },
     });
   },
