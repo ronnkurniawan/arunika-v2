@@ -57,7 +57,7 @@ ScrollTrigger.create({
 // Pastikan fungsi lerp tersedia
 
 
-const serviceCard1 = gsap.utils.toArray(".service1");
+const serviceCard1 = gsap.utils.toArray(".service1"); //choosing the element
 const serviceCard2 = gsap.utils.toArray(".service2");
 const serviceCard3 = gsap.utils.toArray(".service3");
 const serviceCard4 = gsap.utils.toArray(".service4");
@@ -79,19 +79,23 @@ ScrollTrigger.matchMedia({
 
         gsap.set(serviceCard1, { 
           y: `${lerp(180, 1, progress)}vh`,
-          rotate: lerp(25, 0, progress)
+          rotate: lerp(25, 0, progress),
+          scale: lerp(0, 1, progress)
         });
         gsap.set(serviceCard2, { 
           y: `${lerp(400, -23, progress)}vh`,
-          rotate: lerp(50, 0, progress) 
+          rotate: lerp(50, 0, progress),
+          scale: lerp(0, 1, progress) 
         });
         gsap.set(serviceCard3, { 
           y: `${lerp(600, -45, progress)}vh`,
-          rotate: lerp(50, 0, progress) 
+          rotate: lerp(50, 0, progress),
+          scale: lerp(0, 1, progress) 
         });
         gsap.set(serviceCard4, { 
           y: `${lerp(800, -65, progress)}vh`,
-          rotate: lerp(50, 0, progress) 
+          rotate: lerp(50, 0, progress),
+          scale: lerp(0, 1, progress) 
         });
       },
     });
