@@ -6,6 +6,9 @@
 :root {
   --primary-color: rgba(237,241,232,255); /* Light brownish grey */
   --secondary-color: rgba(215,219,210,255); /* darker */
+  --third-color: rgba(237,106,89,255);
+  --fourth-color: rgb(243, 241, 187);
+  --fifth-color: rgba(155,193,188,255);
 }
 
 

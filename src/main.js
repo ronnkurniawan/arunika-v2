@@ -2,6 +2,7 @@ import './style.css'
 import './header.js'
 import './imageSlider.js'
 import './featured-works.js'
+import './services.js'
 
 import { gsap } from "gsap";
     
