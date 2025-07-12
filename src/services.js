@@ -82,19 +82,22 @@ ScrollTrigger.matchMedia({
           rotate: lerp(25, 0, progress),
           scale: lerp(0, 1, progress)
         });
+
         gsap.set(serviceCard2, { 
           y: `${lerp(400, -23, progress)}vh`,
           rotate: lerp(50, 0, progress),
           scale: lerp(0, 1, progress) 
         });
+
         gsap.set(serviceCard3, { 
-          y: `${lerp(600, -45, progress)}vh`,
-          rotate: lerp(50, 0, progress),
+          y: `${lerp(600, -47, progress)}vh`,
+          rotate: lerp(70, 0, progress),
           scale: lerp(0, 1, progress) 
         });
+        
         gsap.set(serviceCard4, { 
-          y: `${lerp(800, -65, progress)}vh`,
-          rotate: lerp(50, 0, progress),
+          y: `${lerp(800, -72, progress)}vh`,
+          rotate: lerp(90, 0, progress),
           scale: lerp(0, 1, progress) 
         });
       },
@@ -115,9 +118,9 @@ ScrollTrigger.matchMedia({
         const progress = self.progress;
 
         gsap.set(serviceCard1, { y: `${lerp(100, 0, progress)}vh` });
-        gsap.set(serviceCard2, { y: `${lerp(250, -16, progress)}vh` });
-        gsap.set(serviceCard3, { y: `${lerp(400, -48, progress)}vh` });
-        gsap.set(serviceCard4, { y: `${lerp(550, -80, progress)}vh` });
+        gsap.set(serviceCard2, { y: `${lerp(250, -18, progress)}vh` });
+        gsap.set(serviceCard3, { y: `${lerp(400, -33, progress)}vh` });
+        gsap.set(serviceCard4, { y: `${lerp(550, -48, progress)}vh` });
       },
     });
   },
