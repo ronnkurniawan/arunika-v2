@@ -5,7 +5,7 @@ const arunikaHeader = document.querySelector('#arunika-header');
 const navOverlay = document.querySelector('#nav-overlay');
 
 
-if (menu) {
+
   menu.addEventListener('click', function () {
     const isHidden = navOverlay.classList.contains('hidden');
 
@@ -28,4 +28,3 @@ if (menu) {
       }, 400); // Disesuaikan dengan Tailwind duration (400ms)
     }
   });
-}

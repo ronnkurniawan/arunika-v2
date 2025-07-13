@@ -9,54 +9,68 @@ function lerp (start, end, p) {
   return start + (end - start) *  p
 }
 
-/*
-const serviceCard1 = gsap.utils.toArray(".service1");
-const serviceCard2 = gsap.utils.toArray(".service2");
-const serviceCard3 = gsap.utils.toArray(".service3");
-const serviceCard4 = gsap.utils.toArray(".service4");
 
-ScrollTrigger.create({
-  trigger: "#services",
-  start: "top bottom",
-  end: "top top",
-  scrub: true,
-  markers: false,
-  pin: false,
-  pinSpacing: true,
-  onUpdate: (self) => {
-    const progress = self.progress;
+// Shorthand media query version
+const serviceConfig = [
+  { service: ".service1", y: [180, 1], rotate: [25, 0], scale: [0, 1] },
+  { service: ".service2", y: [400, -23], rotate: [50, 0], scale: [0, 1] },
+  { service: ".service3", y: [600, -47], rotate: [70, 0], scale: [0, 1] },
+  { service: ".service4", y: [800, -72], rotate: [90, 0], scale: [0, 1] },
+];
 
-    serviceCard1.forEach((img, i) => {
-      gsap.set(img, {
-        y: `${lerp(180, 1, progress)}vh`
-      })
-    })
 
-    serviceCard2.forEach((img, i) => {
-      gsap.set(img, {
-        y: `${lerp(400, -23, progress)}vh`
-      })
-    })
 
-    serviceCard3.forEach((img, i) => {
-      gsap.set(img, {
-        y: `${lerp(600, -45, progress)}vh`
-      })
-    })
+ScrollTrigger.matchMedia({
 
-    serviceCard4.forEach((img, i) => {
-      gsap.set(img, {
-        y: `${lerp(800, -65, progress)}vh`
-      })
-    })
+  // Desktop
+  "(min-width: 1024px)": function () {
+    ScrollTrigger.create({
+      trigger: "#services",
+      start: "top bottom",
+      end: "top top",
+      scrub: true,
+      pin: false,
+      pinSpacing: true,
+      onUpdate: (self) => {
+        const progress = self.progress;
 
-  }
+        serviceConfig.forEach((cfg) => {
+          gsap.utils.toArray(cfg.service).forEach((srv, i) => {
+            gsap.set(srv, {
+              y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`,
+              rotate: lerp(cfg.rotate[0], cfg.rotate[1], progress),
+              scale: lerp(cfg.scale[0], cfg.scale[1], progress),
+            });
+          });
+        });
+      },
+    });
+  },
+
+  // Mobile
+  "(max-width: 767px)": function () {
+    ScrollTrigger.create({
+      trigger: "#services",
+      start: "top bottom",
+      end: "top top",
+      scrub: true,
+      pin: false,
+      pinSpacing: true,
+      onUpdate: (self) => {
+        const progress = self.progress;
+
+        gsap.set(".service1", { y: `${lerp(100, 0, progress)}vh` });
+        gsap.set(".service2", { y: `${lerp(250, -18, progress)}vh` });
+        gsap.set(".service3", { y: `${lerp(400, -33, progress)}vh` });
+        gsap.set(".service4", { y: `${lerp(550, -48, progress)}vh` });
+      },
+    });
+  },
+
 });
-*/
-
-// Pastikan fungsi lerp tersedia
 
 
+/* long code version
 const serviceCard1 = gsap.utils.toArray(".service1"); //choosing the element
 const serviceCard2 = gsap.utils.toArray(".service2");
 const serviceCard3 = gsap.utils.toArray(".service3");
@@ -65,7 +79,7 @@ const serviceCard4 = gsap.utils.toArray(".service4");
 ScrollTrigger.matchMedia({
 
   //Desktop: width ≥ 768px
-  "(min-width: 768px)": function () {
+  "(min-width: 1024px)": function () {
     ScrollTrigger.create({
       trigger: "#services",
       start: "top bottom",
@@ -76,7 +90,7 @@ ScrollTrigger.matchMedia({
       pinSpacing: true,
       onUpdate: (self) => {
         const progress = self.progress;
-
+        
         gsap.set(serviceCard1, { 
           y: `${lerp(180, 1, progress)}vh`,
           rotate: lerp(25, 0, progress),
@@ -127,3 +141,4 @@ ScrollTrigger.matchMedia({
 
 
 });
+*/
