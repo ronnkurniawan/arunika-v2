@@ -11,11 +11,21 @@ function lerp (start, end, p) {
 
 
 // Shorthand media query version
+
+//desktop
 const serviceConfig = [
   { service: ".service1", y: [180, 1], rotate: [25, 0], scale: [0, 1] },
   { service: ".service2", y: [400, -23], rotate: [50, 0], scale: [0, 1] },
   { service: ".service3", y: [600, -47], rotate: [70, 0], scale: [0, 1] },
   { service: ".service4", y: [800, -72], rotate: [90, 0], scale: [0, 1] },
+];
+
+//mobile
+const serviceConfigMobile = [
+  { service: ".service1", y: [100, 0] },
+  { service: ".service2", y: [250, -18] },
+  { service: ".service3", y: [400, -33] },
+  { service: ".service4", y: [550, -48]},
 ];
 
 
@@ -35,7 +45,7 @@ ScrollTrigger.matchMedia({
         const progress = self.progress;
 
         serviceConfig.forEach((cfg) => {
-          gsap.utils.toArray(cfg.service).forEach((srv, i) => {
+          gsap.utils.toArray(cfg.service).forEach((srv) => {
             gsap.set(srv, {
               y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`,
               rotate: lerp(cfg.rotate[0], cfg.rotate[1], progress),
@@ -46,6 +56,9 @@ ScrollTrigger.matchMedia({
       },
     });
   },
+
+  //tablet
+  
 
   // Mobile
   "(max-width: 767px)": function () {
@@ -59,10 +72,13 @@ ScrollTrigger.matchMedia({
       onUpdate: (self) => {
         const progress = self.progress;
 
-        gsap.set(".service1", { y: `${lerp(100, 0, progress)}vh` });
-        gsap.set(".service2", { y: `${lerp(250, -18, progress)}vh` });
-        gsap.set(".service3", { y: `${lerp(400, -33, progress)}vh` });
-        gsap.set(".service4", { y: `${lerp(550, -48, progress)}vh` });
+        serviceConfigMobile.forEach((cfg) => {
+          gsap.utils.toArray(cfg.service).forEach((srv) => {
+            gsap.set(srv, {
+              y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`
+            })
+          })
+        })
       },
     });
   },
@@ -71,10 +87,7 @@ ScrollTrigger.matchMedia({
 
 
 /* long code version
-const serviceCard1 = gsap.utils.toArray(".service1"); //choosing the element
-const serviceCard2 = gsap.utils.toArray(".service2");
-const serviceCard3 = gsap.utils.toArray(".service3");
-const serviceCard4 = gsap.utils.toArray(".service4");
+
 
 ScrollTrigger.matchMedia({
 

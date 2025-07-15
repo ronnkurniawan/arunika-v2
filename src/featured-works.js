@@ -39,6 +39,10 @@ ScrollTrigger.create({
       gsap.set(".slide-text", {
         x: `${lerp(100, -400, progress)}vw`, //lebar total dari 4 slider adalah 400vw
       });
+
+      gsap.set(".slide1", {
+        opacity: lerp(0.95, 1, progress),
+      });
   
       slideConfigs.forEach((cfg) => {
         gsap.utils.toArray(cfg.class).forEach((img, i) => {
@@ -50,7 +54,7 @@ ScrollTrigger.create({
         })
       })
     }
-  })
+  });
 
 /* long code version
 ScrollTrigger.create({
