@@ -25,7 +25,7 @@ let i = 0;
 setInterval(() => {
   imageEl.src = images[i];
   i = (i + 1) % images.length;
-}, 1500) // Ganti gambar setiap 1,5 detik
+}, 1000) // Ganti gambar setiap 1,5 detik
 
 
 function lerp (start, end, p) {

@@ -38,7 +38,7 @@ ScrollTrigger.matchMedia({
       trigger: "#services",
       start: "top bottom",
       end: "top top",
-      scrub: true,
+      scrub: 1,
       pin: false,
       pinSpacing: true,
       onUpdate: (self) => {
@@ -66,7 +66,7 @@ ScrollTrigger.matchMedia({
       trigger: "#services",
       start: "top bottom",
       end: "top top",
-      scrub: true,
+      scrub: 1,
       pin: false,
       pinSpacing: true,
       onUpdate: (self) => {

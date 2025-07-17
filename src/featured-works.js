@@ -40,10 +40,13 @@ ScrollTrigger.create({
         x: `${lerp(100, -400, progress)}vw`, //lebar total dari 4 slider adalah 400vw
       });
 
+      //avoiding element show up before horizontal scroll start
       gsap.set(".slide1", {
-        opacity: lerp(0.95, 1, progress),
+        //opacity: lerp(0.95, 1, progress),
+        autoAlpha: progress > 0.01 ? 1 : 0,
       });
-  
+      
+
       slideConfigs.forEach((cfg) => {
         gsap.utils.toArray(cfg.class).forEach((img, i) => {
           gsap.set(img, {
