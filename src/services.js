@@ -66,7 +66,7 @@ ScrollTrigger.matchMedia({
       trigger: "#services",
       start: "top bottom",
       end: "top top",
-      scrub: 1,
+      scrub: 2,
       pin: false,
       pinSpacing: true,
       onUpdate: (self) => {
