@@ -77,9 +77,22 @@ img {
   @apply max-w-full h-auto;
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
 #CTA {
   background-image: linear-gradient(270deg, #f97316, #bbf7d0, #9333ea);
   background-size: 400% 100%;
   background-position: 0% center;
+  animation: gradientShift 10s ease infinite;
   transition: all 0.3s ease-in-out;
 }
