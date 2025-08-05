@@ -14,7 +14,7 @@ function lerp (start, end, p) {
 
 //desktop
 const serviceConfig = [
-  { service: ".service1", y: [50, 0], rotate: [25, 0], scale: [0, 1] },
+  { service: ".service1", y: [20, 0], rotate: [25, 0], scale: [0, 1] },
   { service: ".service2", y: [100, -20], rotate: [50, 0], scale: [0, 1] },
   { service: ".service3", y: [150, -40], rotate: [70, 0], scale: [0, 1] },
   { service: ".service4", y: [200, -60], rotate: [90, 0], scale: [0, 1] },
@@ -22,11 +22,13 @@ const serviceConfig = [
 
 //mobile
 const serviceConfigMobile = [
-  { service: ".service1", y: [100, 0] },
-  { service: ".service2", y: [250, -18] },
-  { service: ".service3", y: [400, -33] },
-  { service: ".service4", y: [550, -48]},
+  { service: ".service1", y: [50, 0] },
+  { service: ".service2", y: [100, -18] },
+  { service: ".service3", y: [150, -33] },
+  { service: ".service4", y: [200, -48]},
 ];
+
+gsap.set("#services", { autoAlpha: 0 });
 
 ScrollTrigger.matchMedia({
 
@@ -43,6 +45,14 @@ ScrollTrigger.matchMedia({
     onUpdate: (self) => {
       const progress = self.progress;
 
+      // Menyembunyikan elemen services sebelum scroll dimulai
+      // dan menampilkannya setelah scroll dimulai
+      gsap.to("#services", {
+        autoAlpha: progress > 0.01 ? 1 : 0,
+        duration: 0.3,
+      });
+
+      // Atur posisi, rotasi, dan skala setiap layanan
       serviceConfig.forEach((cfg) => {
         gsap.utils.toArray(cfg.service).forEach((srv) => {
           gsap.set(srv, {
@@ -57,9 +67,6 @@ ScrollTrigger.matchMedia({
   });
 },
 
-  //tablet
-  
-
   // Mobile
   "(max-width: 767px)": function () {
     ScrollTrigger.create({
@@ -73,6 +80,12 @@ ScrollTrigger.matchMedia({
       onUpdate: (self) => {
         const progress = self.progress;
 
+        gsap.to("#services", {
+          autoAlpha: progress > 0.01 ? 1 : 0,
+          duration: 0.3,
+        });
+
+        // Atur posisi setiap layanan
         serviceConfigMobile.forEach((cfg) => {
           gsap.utils.toArray(cfg.service).forEach((srv) => {
             gsap.set(srv, {
