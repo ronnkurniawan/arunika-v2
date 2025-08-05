@@ -14,10 +14,10 @@ function lerp (start, end, p) {
 
 //desktop
 const serviceConfig = [
-  { service: ".service1", y: [180, 1], rotate: [25, 0], scale: [0, 1] },
-  { service: ".service2", y: [400, -23], rotate: [50, 0], scale: [0, 1] },
-  { service: ".service3", y: [600, -47], rotate: [70, 0], scale: [0, 1] },
-  { service: ".service4", y: [800, -72], rotate: [90, 0], scale: [0, 1] },
+  { service: ".service1", y: [50, 0], rotate: [25, 0], scale: [0, 1] },
+  { service: ".service2", y: [100, -20], rotate: [50, 0], scale: [0, 1] },
+  { service: ".service3", y: [150, -40], rotate: [70, 0], scale: [0, 1] },
+  { service: ".service4", y: [200, -60], rotate: [90, 0], scale: [0, 1] },
 ];
 
 //mobile
@@ -28,34 +28,34 @@ const serviceConfigMobile = [
   { service: ".service4", y: [550, -48]},
 ];
 
-
-
 ScrollTrigger.matchMedia({
 
-  // Desktop
-  "(min-width: 1024px)": function () {
-    ScrollTrigger.create({
-      trigger: "#services",
-      start: "top bottom",
-      end: "top top",
-      scrub: 1,
-      pin: false,
-      pinSpacing: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
+// Desktop: min-width 1024px
+"(min-width: 1024px)": function () {
+  ScrollTrigger.create({
+    trigger: "#services",
+    start: "top 10%",
+    end: "+=1000", // panjang scroll
+    scrub: 1,
+    pin: true,
+    pinSpacing: true,
+    markers: true, // aktifkan jika ingin melihat posisi start/end
+    onUpdate: (self) => {
+      const progress = self.progress;
 
-        serviceConfig.forEach((cfg) => {
-          gsap.utils.toArray(cfg.service).forEach((srv) => {
-            gsap.set(srv, {
-              y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`,
-              rotate: lerp(cfg.rotate[0], cfg.rotate[1], progress),
-              scale: lerp(cfg.scale[0], cfg.scale[1], progress),
-            });
+      serviceConfig.forEach((cfg) => {
+        gsap.utils.toArray(cfg.service).forEach((srv) => {
+          gsap.set(srv, {
+            y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`,
+            rotate: lerp(cfg.rotate[0], cfg.rotate[1], progress),
+            scale: lerp(cfg.scale[0], cfg.scale[1], progress),
+            autoAlpha: progress > 0.01 ? 1 : 0,
           });
         });
-      },
-    });
-  },
+      });
+    }
+  });
+},
 
   //tablet
   
@@ -64,22 +64,24 @@ ScrollTrigger.matchMedia({
   "(max-width: 767px)": function () {
     ScrollTrigger.create({
       trigger: "#services",
-      start: "top bottom",
-      end: "top top",
-      scrub: 2,
-      pin: false,
+      start: "top 10%",
+      end: "+=1000", // panjang scroll
+      scrub: 1,
+      pin: true,
       pinSpacing: true,
+      markers: true, // aktifkan jika ingin melihat posisi start/end
       onUpdate: (self) => {
         const progress = self.progress;
 
         serviceConfigMobile.forEach((cfg) => {
           gsap.utils.toArray(cfg.service).forEach((srv) => {
             gsap.set(srv, {
-              y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`
+              y: `${lerp(cfg.y[0], cfg.y[1], progress)}vh`,
+              autoAlpha: progress > 0.01 ? 1 : 0,
             })
-          })
-        })
-      },
+          });
+        });
+      }
     });
   },
 
