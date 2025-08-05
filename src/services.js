@@ -41,7 +41,7 @@ ScrollTrigger.matchMedia({
     scrub: 1,
     pin: true,
     pinSpacing: true,
-    markers: true, // aktifkan jika ingin melihat posisi start/end
+    markers: false, // aktifkan jika ingin melihat posisi start/end
     onUpdate: (self) => {
       const progress = self.progress;
 
@@ -76,7 +76,7 @@ ScrollTrigger.matchMedia({
       scrub: 1,
       pin: true,
       pinSpacing: true,
-      markers: true, // aktifkan jika ingin melihat posisi start/end
+      markers: false, // aktifkan jika ingin melihat posisi start/end
       onUpdate: (self) => {
         const progress = self.progress;
 
