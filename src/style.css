@@ -54,7 +54,7 @@
 /* General Reset & Smoothing */
 * {
   @apply box-border;
-  //outline: 1px solid red; /* for focus states */
+  outline: 1px solid red; /* for focus states */
   
 }
 

@@ -9,7 +9,6 @@ function lerp (start, end, p) {
   return start + (end - start) *  p
 }
 
-
 // Shorthand media query version
 
 //desktop
