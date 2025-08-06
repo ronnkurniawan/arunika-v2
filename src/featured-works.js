@@ -24,12 +24,17 @@ const slideConfigs = [
   { class: ".slide-img12", scale: 1, x: [-120, 40], y: [-450, 40] },
 ];
 
+// x: [start, end] - posisi horizontal awal dan akhir
+// y: [start, end] - posisi vertikal awal dan akhir
+// scale: skala awal dan akhir
+// class: selector untuk gambar slider
+
 //shorthand version
 ScrollTrigger.create({
   trigger: "#animate",
   start: "bottom bottom",
   end: "+=3000", // sama dengan 3000px
-  scrub: true,
+  scrub: 1,
   pin: "#featured-works",
   markers: false,
   pinSpacing: true,
